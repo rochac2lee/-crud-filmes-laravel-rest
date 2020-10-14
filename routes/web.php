@@ -14,7 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('filmes');
+    return redirect('home');
 });
 
-Route::resource('/filmes', 'FilmesController');
+Route::resource('/home', HomeController::class);
+Route::resource('/filmes', FilmesController::class);

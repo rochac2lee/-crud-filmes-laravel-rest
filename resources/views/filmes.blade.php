@@ -21,10 +21,10 @@
 <!-- dark -->
 <ul class="nav nav-tabs bg-dark">
   <li class="nav-item">
-    <a class="nav-link active" href="#">Catálogo</a>
+    <a class="nav-link" href="home">Catálogo</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Novo</a>
+    <a class="nav-link active" href="filmes">Novo</a>
   </li>
 </ul>
 
@@ -36,7 +36,8 @@
         <div class="form-group">
             <h3><i class="fa fa-check-square-o"></i> Catálogo de Filmes</h3>
         </div>
-        <form>
+        <form method='post' action='{{route('filmes.store')}}'>
+        @csrf
             <div class="row">
                 <div class="col-md-6">
                 <div class="form-group">
@@ -47,8 +48,8 @@
                 </div>
                 <div class="col-md-6">
                 <div class="form-group">
-                    <label for="classific" class="bmd-label-floating">Classificação Indicativa</label>
-                    <select class="form-control" id="classific" id="classificacao" name="classificacao">
+                    <label for="classificacao" class="bmd-label-floating">Classificação Indicativa</label>
+                    <select class="form-control" id="classificacao" name="classificacao">
                         <option value="">Selecione...</option>
                         <option value="L">Livre</option>
                         <option value="10">Acima de 10 anos</option>
@@ -81,6 +82,8 @@
          </form>
         </div>
     </div>
+
+
 </div>
 
 
