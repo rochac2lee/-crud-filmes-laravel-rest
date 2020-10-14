@@ -1,0 +1,62 @@
+body {
+    background: url('../images/filmes.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.back {
+    background: #0e0e0ec2;
+    padding: 10px;
+}
+
+.view {
+    padding: 1.25rem;
+    margin: 2% 15% 2% 0%;
+    background: #fff;
+}
+
+.bmd-label-floating {
+    color: #424242;
+}
+
+.bmd-btn-fab.btn-primary.custom-file-control:before, .btn-group-raised .btn-primary.custom-file-control:before, .btn-group-raised .btn.btn-primary, .btn-raised.btn-primary.custom-file-control:before, .btn.bmd-btn-fab.btn-primary, .btn.btn-raised.btn-primary {
+    color: #fff;
+    background-color: #3f51b5;
+    border-color: #3f51b5;
+}
+
+.right {
+    float: right;
+}
+
+.bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    color: #424242;
+}
+
+.bmd-form-group .bmd-label-static, .bmd-form-group.is-filled .bmd-label-floating, .bmd-form-group .is-filled .bmd-label-floating, .bmd-form-group.is-focused .bmd-label-floating, .bmd-form-group .is-focused .bmd-label-floating {
+    top: 1rem;
+    left: 0;
+    font-size: .75rem;
+    color: #424242;
+}
+
+.bootstrap-tagsinput {
+    background-color: #fff;
+    border: 0px solid #ccc;
+    border-bottom: 1px solid rgba(0,0,0,.26) !important;
+    box-shadow: none!important;
+    width: 100%;
+    display: inline-block;
+    padding: 4px 6px;
+    color: #555;
+    vertical-align: middle;
+    border-radius: 4px;
+    max-width: 100%;
+    line-height: 22px;
+    cursor: text;
+}
+
+.text {
+    font-size: 12px;
+}
