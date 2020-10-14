@@ -16,10 +16,10 @@
     <link rel="stylesheet" href="css/animate.css">
     
 </head>
-<body>
+<body class="animated fadeIn">
 
 <!-- dark -->
-<ul class="nav nav-tabs bg-dark">
+<ul class="nav nav-tabs bg-dark animated fadeInDown">
   <li class="nav-item">
     <a class="nav-link" href="home">Catálogo</a>
   </li>
@@ -28,13 +28,13 @@
   </li>
 </ul>
 
-<div class="container-fluid">
+<div class="container-fluid animated fadeInLeft">
 
     <div class="row back">
         <div class="col-md-12 view">
         
         <div class="form-group">
-            <h3><i class="fa fa-check-square-o"></i> Catálogo de Filmes</h3>
+            <h3><i class="fa fa-check-square-o"></i> Adicionar Filme</h3>
         </div>
         <form method='post' action='{{route('filmes.store')}}'>
         @csrf

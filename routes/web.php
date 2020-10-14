@@ -17,5 +17,8 @@ Route::get('/', function () {
     return redirect('home');
 });
 
+/** Rota para o Controller Home */
 Route::resource('/home', HomeController::class);
+
+/** Rota para o Controller Filmes */
 Route::resource('/filmes', FilmesController::class);

@@ -34,7 +34,7 @@
         <div class="col-md-12 view">
         
         <div class="form-group">
-            <h3><i class="fa fa-check-square-o"></i> Adicionar Filme</h3>
+            <h3><i class="fa fa-check-square-o"></i> Catálogo de Filme</h3>
         </div>
         <table class="table">
             <thead class="thead-dark">
@@ -49,14 +49,20 @@
             </thead>
             <tbody>
 
-            @foreach($filmes as $f)
+            @foreach($filmes as $f)            
 
                 <tr>
-                <th scope="row">{{ $filme =  $f -> id }}</th>
+                <th scope="row">{{ $id =  $f -> id }}</th>
                 <td>{{ $filme =  $f -> filme }}</td>
-                <td>{{ $filme =  $f -> classificacao }}</td>
-                <td>{{ $filme =  $f -> atores }}</td>
-                <td>{{ $filme =  $f -> diretor }}</td>
+                <td>{{ $classificacao =  $f -> classificacao }}</td>
+                <td>{{ $atores =  $f -> atores }}</td>
+                <td>{{ $diretor =  $f -> diretor }}</td>
+                <td>
+                    
+                <button type="button" onclick=window.location.href="api/filmes/deletar/{{ $id =  $f -> id }}" class="btn btn-raised btn-primary"><i class="fa fa-trash"></i></button>
+
+
+                </td>
                 </tr>
 
             @endforeach 

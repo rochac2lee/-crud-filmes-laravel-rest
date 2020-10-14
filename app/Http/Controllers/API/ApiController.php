@@ -11,4 +11,10 @@ class ApiController extends Controller
     public function index() {
         return FilmesModel::all();
     }
+
+    public function destroy($id) {
+        $filme = FilmesModel::Find($id);
+        $filme -> delete();
+        return redirect('/home');
+    }
 }
