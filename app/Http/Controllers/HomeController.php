@@ -7,6 +7,11 @@ use DB;
 use Validator;
 use App\FilmesModel;
 
+/**
+ * Classe do Controler Home
+ *
+ * @copyright (c) 2020, Cleberli da Rocha
+ */
 class HomeController extends Controller
 {    
     /**
