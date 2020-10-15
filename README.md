@@ -65,7 +65,7 @@ php artisan migrate
 php artisan serve
 ```
 
-- Acesse a aplicação http://[SEU_SERVIDOR]:8000/
+- Acesse a aplicação http://[SEU_SERVIDOR]:8000
 
 ## Créditos
 
