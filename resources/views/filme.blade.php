@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" />
     <!-- Código CSS criado para aplicação Chat -->
     
-    <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="../../css/bootstrap-tagsinput.css">
+    <link rel="stylesheet" href="../../css/app.css">
+    <link rel="stylesheet" href="../../css/animate.css">
     
 </head>
 <body class="animated fadeIn">
@@ -34,15 +34,16 @@
         <div class="col-md-12 view">
         
         <div class="form-group">
-            <h3><i class="fa fa-check-square-o"></i> Adicionar Filme</h3>
+            <h3><i class="fa fa-check-square-o"></i> Editar Filme</h3>
         </div>
-        <form method='post' action='{{route('api.filmes.store')}}'>
-        @csrf
+        <form method='post' action='{{route('api.filme.update', $filme->id)}}'>
+        {{ @csrf_field() }} 
+        <input type="hidden" name="_method" value="put">
             <div class="row">
                 <div class="col-md-6">
                 <div class="form-group">
                     <label for="filme" class="bmd-label-floating">Título do Filme</label>
-                    <input type="text" class="form-control" id="filme" name="filme">
+                    <input type="text" class="form-control" id="filme" name="filme" value="{{ $filme->filme }}">
                     <span class="bmd-help">Informe o nome do filme!</span>
                 </div>
                 </div>
@@ -50,7 +51,7 @@
                 <div class="form-group">
                     <label for="classificacao" class="bmd-label-floating">Classificação Indicativa</label>
                     <select class="form-control" id="classificacao" name="classificacao">
-                        <option value="">Selecione...</option>
+                        <option value="{{ $filme->classificacao }}">{{ $filme->classificacao }}</option>
                         <option value="L">Livre</option>
                         <option value="10">Acima de 10 anos</option>
                         <option value="12">Acima de 12 anos</option>
@@ -63,14 +64,14 @@
                 <div class="col-md-6">
                 <div class="form-group">
                     <label>Atores</label>
-                    <input type="text" class="form-control" multiple data-role="tagsinput" id="atores" name="atores">
+                    <input type="text" class="form-control" multiple data-role="tagsinput" id="atores" name="atores" value="{{ $filme->atores }}">
                     <span class="text">* Separe o nome dos atores por virgula!</span>
                 </div>
                 </div>
                 <div class="col-md-6">
                 <div class="form-group">
                     <label for="diretor" class="bmd-label-floating">Dirigido por</label>
-                    <input type="text" class="form-control" id="diretor" name="diretor">
+                    <input type="text" class="form-control" id="diretor" name="diretor" value="{{ $filme->diretor }}">
                     <span class="bmd-help">Informe o nome do Diretor!</span>
                 </div>
                 </div>
@@ -93,6 +94,6 @@
 <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
 <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
-<script src="js/bootstrap-tagsinput.min.js"></script>
+<script src="../../js/bootstrap-tagsinput.min.js"></script>
 
 </html>

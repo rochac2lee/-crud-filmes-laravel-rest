@@ -7,6 +7,11 @@ use DB;
 use Validator;
 use App\FilmesModel;
 
+/**
+ * Classe do Controler Filmes
+ *
+ * @copyright (c) 2020, Cleberli da Rocha
+ */
 class FilmesController extends Controller
 {    
     /**
@@ -17,27 +22,16 @@ class FilmesController extends Controller
     public function index() {
         return view("filmes");
     }
-    
+        
     /**
-     * O método store valida se todos os campos foram preenchidos e envia ao Modal para salvar no Banco de Dados
+     * O método edit envia o id do filme que o usuário deseja editar para view
      *
-     * @param  object $request recebe todas as informações do POST
+     * @param  object $id = id do filme a ser editado
      * @return void
      */
-    public function store(Request $request) {
-        $validator = Validator::make($request->all(), [
-            'filme' => 'required',
-            'classificacao' => 'required',
-            'atores' => 'required',
-            'diretor' => 'required',
-        ]);
-
-        $FilmesModel = new FilmesModel;
-        $FilmesModel -> filme = $request -> input('filme');
-        $FilmesModel -> classificacao = $request -> input('classificacao');
-        $FilmesModel -> atores = $request -> input('atores');
-        $FilmesModel -> diretor = $request -> input('diretor');
-        $FilmesModel -> save();
-        return redirect('/filmes');
+    public function edit($id) {
+        $filme = FilmesModel::Find($id);
+        return view("/filme", compact('filme'));
     }
+
 }

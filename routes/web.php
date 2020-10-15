@@ -21,4 +21,7 @@ Route::get('/', function () {
 Route::resource('/home', HomeController::class);
 
 /** Rota para o Controller Filmes */
+Route::get('/filme/editar/{id}', 'FilmesController@edit') -> name('filmes.edit');
+
+/** Rota para o Controller Filmes */
 Route::resource('/filmes', FilmesController::class);

@@ -59,8 +59,12 @@
                 <td>{{ $diretor =  $f -> diretor }}</td>
                 <td>
                     
-                <button type="button" onclick=window.location.href="api/filmes/deletar/{{ $id =  $f -> id }}" class="btn btn-raised btn-primary"><i class="fa fa-trash"></i></button>
-
+                <button type="button" onclick=window.location.href="filme/editar/{{ $id =  $f -> id }}" class="btn btn-raised btn-primary">
+                    <i class="fa fa-pencil-alt"></i>
+                </button>
+                <button type="button" onclick=window.location.href="{{route('api.filme.destroy', $id =  $f -> id  )}}" class="btn btn-raised btn-danger">
+                    <i class="fa fa-trash"></i>
+                </button>
 
                 </td>
                 </tr>
