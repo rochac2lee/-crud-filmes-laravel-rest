@@ -53,16 +53,16 @@ DB_USERNAME=username // Nome de usuário usado para conectar ao banco de dados -
 DB_PASSWORD=password // A senha usada para conectar ao banco de dados - exemplo: 123456
 ```
 
-- Após tudo configurado, abra o seu console e inicie sua aplicação digitando o comando:
-
-```
-php artisan serve
-```
-
 - Insira as tabelas da aplicação com o comando:
 
 ```
 php artisan migrate
+```
+
+- Após tudo configurado, abra o seu console e inicie sua aplicação digitando o comando:
+
+```
+php artisan serve
 ```
 
 - Acesse a aplicação http://[SEU_SERVIDOR]:8000/
