@@ -35,39 +35,35 @@ Link da Collection com JSON: https://www.getpostman.com/collections/f907a03bc8cc
 
 - Altere o arquivo config/database.php com as configurações do seu servidor:
 
-<blockout>
-
+```
 'host' => env('DB_HOST', 'hostname'), // O nome do host do seu servidor de banco de dados. - exemplo: localhost 
 'port' => env('DB_PORT', '3306'), // Porta do servidor mysql
 'database' => env('DB_DATABASE', 'crud-filmes-laravel-rest'), // Nome da base de dados
 'username' => env('DB_USERNAME', 'username'), // Nome de usuário usado para conectar ao banco de dados - exemplo: root
 'password' => env('DB_PASSWORD', 'password'), // A senha usada para conectar ao banco de dados - exemplo: 123456
-
-</blockout>
+```
 
 - Necessário também alterar o arquivo .env com as configurações do seu servidor:
 
-<blockout>
-
+```
 DB_HOST=hostname // O nome do host do seu servidor de banco de dados.
 DB_PORT=3306 // Porta do servidor mysql
 DB_DATABASE=crud-filmes-laravel-rest // Nome da base de dados
 DB_USERNAME=username // Nome de usuário usado para conectar ao banco de dados - exemplo: root
 DB_PASSWORD=password // A senha usada para conectar ao banco de dados - exemplo: 123456
-
-</blockout>
+```
 
 - Após tudo configurado, abra o seu console e inicie sua aplicação digitando o comando:
 
-<blockout>
+```
 php artisan serve
-</blockout>
+```
 
 - Insira as tabelas da aplicação com o comando:
 
-<blockout>
+```
 php artisan migrate
-</blockout>
+```
 
 - Acesse a aplicação http://[SEU_SERVIDOR]:8000/
 
